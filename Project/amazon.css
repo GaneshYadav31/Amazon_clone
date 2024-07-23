@@ -19,7 +19,7 @@
 }
 
 .logo {
-    background-image: url("images1.png");
+    background-image: url("images4.jpg");
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -35,18 +35,20 @@
 
 .add-first {
     color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 10px;
+    font-size: 0.80rem;
+    margin-left: 20px;
 }
 
 .add-second {
     color: white;
     margin-left: 8px;
+    font-size: 0.90rem;
 }
 
 .add-icon {
     display: flex;
     align-items: center;
+    margin-right:0.7rem;
 }
 
 .nav-add {
@@ -60,9 +62,10 @@
 .nav-search {
     display: flex;
     justify-content: space-evenly;
-    width: 720px;
+    width: 780px;
     height: 40px;
     border-radius: 4px;
+    border: 3px solid transparent;
 }
 
 .nav-search:hover {
@@ -70,12 +73,15 @@
 }
 
 .search-select {
-    background-color: #f3f3f3;
+    background-color: #cccccc;
     width: 50px;
-    text-align: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border: none;
+    cursor: pointer;
+}
+.search-all{
+    text-align: center;
 }
 
 .search-input {
@@ -101,10 +107,22 @@ span {
 }
 
 .nav-second {
-    font-size: 0.95rem;
     font-weight: 700;
+    font-size: 0.90rem;;
 }
 
+.nav-lang{
+    font-size:0.85rem;
+    display: flex;
+}
+.lang-select{
+    width:52px;
+    border: none;
+    background-color: #0f1111 ;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
 .nav-signin {
     border: 2px solid transparent;
 }
@@ -164,7 +182,6 @@ span {
 }
 
 .panel-ops {
-    width: 70%;
     font-size: 0.85rem;
 }
 
@@ -197,8 +214,16 @@ span {
     background-image: url("hero1.jpg");
     height: 500px;
     background-size: cover;
+    animation: changeimage 20s ease-in infinite;
 }
-
+/*@keyframes changeimage{
+    0% {background-image: url("hero1.jpg");}
+    25% {background-image: url("hero2.jpg");}
+    50% {background-image: url("hero3.jpg");}
+    75% {background-image: url("hero.jpg");}
+    100% {background-image: url("hero1.jpg");}
+}*/
+    
 
 .hero-msg {
     background-color: white;
@@ -232,6 +257,7 @@ span {
     flex-direction: column;
     align-items: center;
     border:1.5px solid transparent;
+    border-radius: none;
 }
 
 .box:hover {
@@ -247,7 +273,10 @@ span {
     background-size: cover;
     margin-bottom: 1rem;
 }
-
+.box-img1{
+    display: flex;
+    justify-content:space-evenly;
+}
 .box1 .box-img {
     background-image: url("box1-img.jpg");
 }
@@ -278,6 +307,13 @@ span {
 }
 .box10 .box-img {
     background-image: url("box9-img.jpg");
+}
+.box11 .box-img {
+    background-image: url("2.1.jpg");
+    /*background-image: url("2.2.jpg");
+    background-image: url("2.3.jpg");
+    background-image: url("2.4.jpg");*/
+
 }
 footer{
     margin-top:15px;
@@ -496,3 +532,59 @@ ul a{
     top: 8rem;
     left: 2rem;
 }  
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .card1{
+    background-color: white; 
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 400px;
+    width: 23%;
+    margin-top: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-container img {
+    width: 48%;
+    
+    height: 90px;
+}
+
+.card-text{
+    position: relative;
+    bottom: 3.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.card1{
+    border: 1.7px solid transparent;
+}
+
+.card1:hover{
+    border: 1.7px solid black;
+}
